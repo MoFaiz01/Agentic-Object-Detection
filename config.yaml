@@ -11,10 +11,10 @@ logging:
   level: INFO
   log_dir: experiments/logs
 model:
-  conf_threshold: 0.35
+  conf_threshold: 0.25
   iou_threshold: 0.5
   primary: yolo
-  yolo_weights: G:\Agentic_Object_Detection_System\models\trained_weights\yolo_train5\weights\best.pt
+  yolo_weights: yolov8n.pt
 paths:
   data_dir: data
   experiments_dir: experiments

@@ -111,6 +111,15 @@ button.ghost {
 .canvas-wrap {
   width: 100%;
   overflow: auto;
+  position: relative;
+}
+
+.live-video {
+  display: none;
+}
+
+.live-video.active {
+  display: none;
 }
 
 #previewCanvas {

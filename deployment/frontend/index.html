@@ -11,20 +11,23 @@
     <header class="hero">
       <p class="kicker">Agentic Object Detection System</p>
       <h1>Detection Dashboard</h1>
-      <p class="sub">Upload an image and run `/detect` to visualize predictions.</p>
+      <p class="sub">Upload an image or run live webcam detection from the browser.</p>
     </header>
 
     <section class="panel control-panel">
       <label for="fileInput" class="upload-label">Select image</label>
       <input id="fileInput" type="file" accept="image/*">
       <button id="detectBtn" type="button" disabled>Run Detection</button>
+      <button id="startLiveBtn" type="button">Start Live Camera</button>
+      <button id="stopLiveBtn" type="button" class="ghost" disabled>Stop Live</button>
       <button id="clearBtn" type="button" class="ghost">Clear</button>
-      <p id="statusText" class="status">Waiting for image...</p>
+      <p id="statusText" class="status">Waiting for image or camera...</p>
     </section>
 
     <section class="layout">
       <article class="panel canvas-panel">
         <div class="canvas-wrap">
+          <video id="liveVideo" class="live-video" autoplay playsinline muted></video>
           <canvas id="previewCanvas"></canvas>
         </div>
       </article>
@@ -34,6 +37,7 @@
         <div id="summary" class="summary">
           <p><span>Detections</span><strong id="detCount">0</strong></p>
           <p><span>Latency</span><strong id="latency">-</strong></p>
+          <p><span>Mode</span><strong id="modeText">Idle</strong></p>
         </div>
         <h3>Detections</h3>
         <ul id="detectionList" class="detection-list"></ul>
