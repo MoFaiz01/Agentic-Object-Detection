@@ -1,0 +1,25 @@
+agent:
+  enabled: true
+  entropy_threshold: 1.2
+  high_entropy_strategy: yolo
+  low_entropy_strategy: lightweight
+  policy: entropy
+  strategy:
+    high_entropy: yolo
+    low_entropy: lightweight
+logging:
+  level: INFO
+  log_dir: experiments/logs
+model:
+  conf_threshold: 0.35
+  iou_threshold: 0.5
+  primary: yolo
+  yolo_weights: G:\Agentic_Object_Detection_System\models\trained_weights\yolo_train5\weights\best.pt
+paths:
+  data_dir: data
+  experiments_dir: experiments
+  models_dir: models
+  results_dir: results
+project:
+  name: Agentic_Object_Detection_System
+  seed: 42

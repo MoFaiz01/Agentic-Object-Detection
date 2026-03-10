@@ -1,0 +1,10 @@
+numpy>=1.23
+opencv-python>=4.8
+pyyaml>=6.0
+tqdm>=4.66
+matplotlib>=3.7
+
+# Optional: install for actual YOLO inference
+ultralytics>=8.0.0; platform_system != "Darwin" or platform_machine != "arm64"
+torch>=2.0; platform_system != "Darwin" or platform_machine != "arm64"
+torchvision>=0.15; platform_system != "Darwin" or platform_machine != "arm64"

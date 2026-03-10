@@ -1,0 +1,9 @@
+names:
+  0: person
+  1: car
+  2: dog
+nc: 3
+path: G:\Agentic_Object_Detection_System\data
+test: test/images
+train: train/images
+val: val/images
